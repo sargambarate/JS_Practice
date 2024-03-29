@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+       <style>
+        body
+        {
+            background-color: background-color: #FFFFFF;
+            background-image: linear-gradient(180deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
+            min-height: 100vh;
+        }
+        .app-title
+        {
+            text-align: center;
+        }
+        .bulb-container
+        {
+            background-color:white;
+            width: 400px;
+            margin: 10px auto;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(red, green, blue, alpha);
+        }
+        .blue-img{
+            height: 150px;
+        }
+        .btn-container{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .btn{
+
+            font-size: 20px;
+            padding:5px 20px ;
+            border-radius: 40px;
+            border: none;
+           margin: 0 20px;
+           cursor: pointer;
+        }
+        .btn:hover{
+            box-shadow: 0 0 10px rgba(red, green, blue, alpha);
+        }
+        .btn-on{
+            background-color: rgb(10, 151, 39);
+        }
+        .btn-off{
+            background-color: rgb(204, 35, 35);
+        }
+        @media screen and (max-width: 600px){
+          .bulb-containe{
+            width: 80%;
+          }  
+          .blue-img{
+            height: 150px;
+          }
+        }
+        </style>
+</head>
+<body>
+    <h1 class="app-title">Blue Taggler</h1>
+    <div class="bulb-container">
+    <img src="./img/lightbulb (1).png" class="blue-img" id="bulb">
+    </div>
+    <div class="btn-container">
+    <button class="btn btn-on" onclick="turnOn()">
+    On</button>
+    
+    <button class="btn btn-off" onclick="turnOff()">
+    Off</button>
+</div>
+<script>
+    function turnOn(){
+        const bulbElement = document.getElementById('bulb');
+        bulbElement.src = './img/lightbulb (3).png';
+    }
+    function turnOff(){
+        const bulbElement = document.getElementById('bulb');
+        bulbElement.src = './img/incandescent-light-bulb.png';
+    }
+</script>
+</body>
+</html>
